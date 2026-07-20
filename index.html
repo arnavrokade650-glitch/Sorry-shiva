@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Shiva ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e8,#ffeef7);
+overflow-x:hidden;
+text-align:center;
+}
+
+.container{
+max-width:700px;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+h1{
+color:#ff4081;
+}
+
+.question{
+text-align:left;
+margin:20px 0;
+font-size:18px;
+}
+
+button{
+background:#ff4081;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e91e63;
+}
+
+#message{
+display:none;
+animation:fade 1s;
+}
+
+img{
+width:90%;
+max-width:400px;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.heart{
+position:fixed;
+color:pink;
+animation:float 8s linear infinite;
+font-size:24px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="quiz">
+
+<h1>💖 Just 3 Questions 💖</h1>
+
+<div class="question">
+<p><b>1. Is this Shivani Anil Kamble?</b></p>
+<input type="radio" name="q1"> Yes<br>
+<input type="radio" name="q1"> No
+</div>
+
+<div class="question">
+<p><b>2. Are you Arnav Rokade's Girlfriend?</b></p>
+<input type="radio" name="q2"> Yes ❤️<br>
+<input type="radio" name="q2"> Definitely Yes 🥰
+</div>
+
+<div class="question">
+<p><b>3. Are you angry on him?</b></p>
+<input type="radio" name="q3"> Yes 😔<br>
+<input type="radio" name="q3"> No 😊
+</div>
+
+<button onclick="showMessage()">Continue ❤️</button>
+
+</div>
+
+<div class="container" id="message">
+
+<h1>🥹 Sorry Shiva 🥹</h1>
+
+<img src="smile.jpg" alt="Shiva">
+
+<h2 style="color:#ff4081;">
+Please keep smiling 😊<br>
+Like smiling in the picture ❤️
+</h2>
+
+<p style="font-size:22px;">
+🌸 You are precious.<br><br>
+I hope this little surprise makes you smile again. 💕<br><br>
+With love,<br>
+❤️ Arnav ❤️
+</p>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("quiz").style.display="none";
+document.getElementById("message").style.display="block";
+}
+
+function hearts(){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*30)+"px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),8000);
+
+}
+
+setInterval(hearts,400);
+
+</script>
+
+</body>
+</html>
